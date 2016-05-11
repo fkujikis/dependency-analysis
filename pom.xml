@@ -569,6 +569,33 @@
                 </plugins>
             </build>
         </profile>
+        
+        <profile>
+        	<properties>
+        		<maven.test.skip>true</maven.test.skip>
+        	</properties>
+            <id>deployApplicationEar</id>
+            <activation>
+                <property>
+                    <name>deployApplicationEar</name>
+                </property>
+            </activation>
+            <modules>
+            	<module>testsuite</module>
+            </modules>       
+            <build>
+            	<plugins>
+		            <plugin>
+		                <groupId>org.jboss.as.plugins</groupId>
+		                <artifactId>jboss-as-maven-plugin</artifactId>
+		                <version>7.7.Final</version>
+						<configuration>
+							<skip>true</skip>
+						</configuration>
+		            </plugin>
+            	</plugins>
+            </build>
+        </profile>
 
     </profiles>
 </project>

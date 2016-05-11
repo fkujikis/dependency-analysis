@@ -115,6 +115,16 @@
                     <outputDirectory>${outDirectory}</outputDirectory>
                 </configuration>
             </plugin>
+            <plugin>
+		    	<groupId>org.jboss.as.plugins</groupId>
+		    	<artifactId>jboss-as-maven-plugin</artifactId>
+		        <version>7.7.Final</version>
+				<configuration>
+					<targetDir>target</targetDir>
+					<filename>dependency-analysis.ear</filename>
+					<skip>false</skip>
+				</configuration>
+			</plugin>
         </plugins>
     </build>
 
