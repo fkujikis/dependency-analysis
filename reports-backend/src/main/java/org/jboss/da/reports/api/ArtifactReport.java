@@ -28,6 +28,10 @@ public class ArtifactReport implements Comparable<ArtifactReport> {
 
     @Getter
     @NonNull
+    private final Set<Long> ProductVersions = new HashSet<>();
+
+    @Getter
+    @NonNull
     @XmlTransient
     private GAV gav;
 
